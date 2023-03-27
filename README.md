@@ -7,9 +7,9 @@
 |------|---|---|
 |조장,백엔드|202010852|[김채연](https://github.com/chaerish)|
 |백엔드|202110963|[이서연](https://github.com/noeyoes)|
-|프론트엔드|202010049|김지영|
-|프론트엔드|202010060|이유민|
-|프론트엔드|202110927|박서연|
+|프론트엔드|202010049|[김지영](https://github.com/jeeeyyoung)|
+|프론트엔드|202010060|[이유민](https://github.com/whatdoyumin)|
+|프론트엔드|202110927|[박서연](https://github.com/yxoni)|
 <h2> 📚 STACKS </h2>
 <div align="center">
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
