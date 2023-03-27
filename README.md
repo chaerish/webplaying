@@ -1,15 +1,20 @@
 <div align="center">
 <h1>💙2023-1 소프트웨어 공학 팀플💙</h1>
 <h3> webplaying = 웹페이지 만들기 놀이 한다는 뜻 </h3>
-<h2> 🐶팀원🐶 </h2>
+<h2>🐶&nbsp;팀원&nbsp;🐶</h2> <!--&nbsp;는 띄어쓰기임-->
 
-|역할|학번|이름|
-|------|---|---|
-|조장,백엔드|202010852|[김채연](https://github.com/chaerish)|
-|백엔드|202110963|[이서연](https://github.com/noeyoes)|
-|프론트엔드|202010049|[김지영](https://github.com/jeeeyyoung)|
-|프론트엔드|202010060|[이유민](https://github.com/whatdoyumin)|
-|프론트엔드|202110927|[박서연](https://github.com/yxoni)|
+|프로필|<img src="https://user-images.githubusercontent.com/90055686/227866493-64785556-e84c-48d1-9e7f-942e525b85a8.jpeg" width="100" height="110" />|<img src="https://user-images.githubusercontent.com/90055686/227870160-e5371d81-9aee-4a72-bd4d-6e4be6e4a424.JPG" width="90" height="120" />|<img  src="https://user-images.githubusercontent.com/90055686/227869693-9603ea96-47bc-4428-85b9-a4851204419e.png" width="100" height="110" />|<img src=" " width="100" height="110" />|<img src="https://user-images.githubusercontent.com/90055686/227873927-174d66a6-5bae-4bd8-b2a9-c3527aedb026.jpeg" width="90" height="120" />|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|역할|팀장,백엔드|백엔드|프론트엔드|프론트엔드|프론트엔드|
+|학번|202010852|202110963|202010049|202010060|202110927|
+|이름|[김채연🐣](https://github.com/chaerish)|[이서연🐰](https://github.com/noeyoes)|[김지영🍳](https://github.com/jeeeyyoung)|[이유민🦄](https://github.com/whatdoyumin)|[박서연🐱](https://github.com/yxoni)|
+
+<div align="center">
+  이름을 클릭하면 팀원들 깃허브를 구경할 수 있어요!😆
+</div>
+
+<br />
+
 <h2> 📚 STACKS </h2>
 <div align="center">
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
