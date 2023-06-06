@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content:left;
+    margin: 2% 2% 0% 2%;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 230px;
+    height: 40px;
+}
+
+.user {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.goHome {
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+.goChallenge {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.goMypage {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+header {
+    border-bottom: 1px solid #3b4f69;
+}
+
+a {
+    text-decoration: none;    /*밑줄 없애기*/
+    color: black;
+  }
+
+li {
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+
+
