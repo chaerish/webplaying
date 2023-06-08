@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TodoPlay</title>
+        <link href="../css/main.css" rel="stylesheet" type="text/css" />
+        <link href="../css/side-bar.css" rel="stylesheet" type="text/css" />
+        <link href="../css/calendar.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <ul class="menu">
+                <li class="logo"><img src="../img/logo.png" /></li>
+                <li class="user">탁호님 안녕하세요!</li>
+                <li class="goHome"><a href="">홈</a></li>
+                <li class="goChallenge"><a href="">챌린지 둘러보기</a></li>
+                <li class="goMypage"><a href="">마이페이지</a></li>
+            </ul>
+        </header>
+
+    <!-- 전체 캘린더 flex -->
+    <div class="container">
+
+
+
+        <!-- 메인 캘린더 -->
+        <div class='rap'>    
+            <div class="header">
+                <h2 class='dateTitle'></h2>
+                <div class="btn prevDay"></div>
+                <div class="btn nextDay"></div>
+            </div>
+            
+            <div class="grid dateHead">
+              <div id="weekend">SUN</div>
+              <div>MON</div>
+              <div>TUE</div>
+              <div>WED</div>
+              <div>THU</div>
+              <div>FRI</div>
+              <div id="weekend">SAT</div>
+            </div>
+        
+            <div class="grid dateBoard"></div>
+          </div>
+        
+        <!-- 사이드바 flex container -->
+        <div class="side-bar">
+
+            <div class="viewOption">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>  
+            
+            <div class="box">
+                <div class="preview">
+                    <div class="miniHeader">
+                        <button class="year-month" onclick="goToday()"></button>
+                    </div>
+                    <div class="main">
+                        <div class="days">
+                            <div class="day">S</div>
+                            <div class="day">M</div>
+                            <div class="day">T</div>
+                            <div class="day">W</div>
+                            <div class="day">T</div>
+                            <div class="day">F</div>
+                            <div class="day">S</div>
+                        </div>
+                        <div class="dates"></div>
+                </div>
+                      
+                </div>
+
+
+
+                <p>Today's Todo</p>
+                <div class="Today-todo">
+
+                    <!-- <h3>할 일 등록</h3>
+                    <p>
+                        <input id="new-task" type="text">
+                        <button>추가</button>
+                    </p> -->
+                    <h3>Daily</h3>
+                    <ul id="incomplete-tasks">
+                        <li>
+                            <input type="checkbox" id="checkBtn" disabled>
+                                <label>밥먹기</label>
+                            
+                            <!-- <button class="edit">Edit</button>
+                            <button class="delete">Delete</button> -->
+                        </li>
+                        <li>
+                            <input type="checkbox" id="checkBtn">
+                                <label>코딩하기</label>
+                            
+                            <!-- <button class="edit">Edit</button>
+                            <button class="delete">Delete</button> -->
+                        </li>
+                        <li>
+                            <input type="checkbox" id="checkBtn">
+                                <label>집가기</label>
+                            
+                            <!-- <button class="edit">Edit</button>
+                            <button class="delete">Delete</button> -->
+                        </li>
+                    </ul>
+
+                    <h3>하마 챌린지</h3>
+                    <ul id="challenge">
+                        <li>
+                            <input type="checkbox" id="checkBtn">
+                                <label>물 1L 마셔버리기</label>
+                           
+                            <!-- <button class="edit">Edit</button>
+                            <button class="delete">Delete</button> -->
+                        </li>
+                       
+                    </ul>
+
+                    <!-- <h3>Completed</h3>
+                    <ul id="completed-tasks">
+                        <li>
+                            <input type="checkbox" checked>
+                            <label>See the Doctor</label>
+                            <input type="text">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </li>
+                    </ul> -->
+
+                </div>
+            </div>
+            
+         </div>
+
+
+    </div>
+          <script src="../js/side-bar.js"></script>
+          <script src="../js/calendar.js"></script>
+          
+    </body>
+</html>
