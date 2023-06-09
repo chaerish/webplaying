@@ -47,7 +47,7 @@ const firstDay = new Date(date.setDate(1)).getDay();
     const date = `${currentYear}-${currentMonth.pad()}-${i.pad()}`
     
     htmlDummy += `
-      <div class="item">
+      <div class="item${i}" onclick="location.href='/calendar/day'">
         ${i}
         <p>
           ${calendarList[date]?.join('</p><p>') || ''}
@@ -79,3 +79,14 @@ makeCalendar(new Date(date.setMonth(date.getMonth() - 1)));
 document.querySelector(`.nextDay`).onclick = () => {
 makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
 }
+// document.getElementsByClassName("item${i}").addEventListener("click", e=> {
+//   location.href="/todocalendar/templates/todocalendar/day.html"
+// });
+// Loop through the elements with class names item1, item2, item3, etc.
+//  const element = document.getElementsByClassName(`.item${i}`);
+//      element.addEventListener("click", function() {
+//        location.href = "/templates/todocalendar/day.html";  // Change the URL path to match your day.html path
+//   });
+// document.querySelector(`.item${i}`).onclick = () => {
+//     location.href="/todocalendar/templates/todocalendar/day.html";
+// }

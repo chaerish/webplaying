@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -6,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="../css/day.css" rel="stylesheet" type="text/css" />
+    <link href="{% static '/css/todocalendar/day.css' %}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header>
         <ul class="menu">
-            <li class="logo"><img src="../img/logo.png" /></li>
+            <li class="logo"><img src="{% static '/img/logo.png' %}" /></li>
             <li class="user">탁호님 안녕하세요!</li>
             <li class="goHome">홈</li>
             <li class="goChallenge">챌린지 둘러보기</li>
@@ -47,28 +48,31 @@
                     <p class="mon-day"></p>
                     <p class="ment">오늘의 할 일</p>
                 </div>
+                {% for item in item_list %}
                 <div class="todo-list">
                     <div class="one">
-                        <p class="category">Daily</p>
+                        <p class="category">{{ item.category }}</p>
                         <div class="check">
                             <input type="checkbox">
-                            <label for="todo">todo</label>
+                            <label for="todo">{{ item.content }}</label>
                         </div>
-                        <div class="check">
-                            <input type="checkbox">
-                            <label for="todo">todo</label>
-                        </div>
-
-                    </div>
-                    <div class="one">
-                        <p>
-                            d
-                        </p>
                     </div>
                 </div>
+                {% endfor %}
+                <form method="POST" action="" style="margin-left:40%;padding-top: 5%">
+                {% csrf_token %}
+                    <select name="category">
+                        {% for c in item_list %}
+                            <option value="{{ c.category.pk }}">{{ c.category }}</option>
+                        {% endfor %}
+                    </select>
+                     <input type="text" name="todo" placeholder="할일을 입력하세요">
+                    <button type="submit">추가</button>
+                </form>
             </div>
         </div>
-        <script src="../js/day.js"></script>
+        <script src="{% static '/js/todocalendar/day.js' %}"></script>
+    </div>
 </body>
 
 </html>

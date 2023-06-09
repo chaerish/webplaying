@@ -4,44 +4,201 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ef9d6f-3b05-4ba0-8a69-4878686ce841" name="Changes" comment="" />
+    <list default="true" id="19c0ee18-f643-414d-a63f-be21ce61afa0" name="Changes" comment="장고 앱 분리함">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/webplaying.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/todoplay.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/find.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/change_pw.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/find.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/find_id.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/find_id_result.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/find_pw.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/find_pw_result.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/home/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/day.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/side-bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/week.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/login_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/day.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/side-bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/week.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/day.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/month.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/week.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todocalendar/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todochallenge/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/find_pw_result.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/calendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/day.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/side-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/week.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/day.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/side-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/week.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todocalendar/templates/day.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todocalendar/templates/find.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todocalendar/templates/month.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todocalendar/templates/week.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../요구사항 명세서 3팀 1.0.1 ver .doc" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2QXz12AQbkBN42O8CVJ5vz549Z4" />
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QviLidT2Lg63nRXGXmqjAVIVFD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/vecherish/Desktop/ToDoPlay",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vecherish/Documents/github/webplaying/todoplay&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js/todocalendar" />
+      <recent name="$PROJECT_DIR$/static/css/todocalendar" />
+      <recent name="$PROJECT_DIR$/todocalendar" />
+      <recent name="$PROJECT_DIR$/home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css/todocalendar" />
+      <recent name="$PROJECT_DIR$/static/css/home" />
+      <recent name="$PROJECT_DIR$/static/js/todocalendar" />
+      <recent name="$PROJECT_DIR$/todocalendar/templates/todocalendar" />
+      <recent name="$PROJECT_DIR$/todocalendar/templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.month.html">
+    <configuration name="find.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/todoplay/home/templates/find.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="month.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/todoplay/todocalendar/templates/todocalendar/month.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="todoplay" type="Python.DjangoServer" factoryName="Django server">
+      <module name="todoplay" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.month.html" />
+        <item itemvalue="JavaScript Debug.find.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="43ef9d6f-3b05-4ba0-8a69-4878686ce841" name="Changes" comment="" />
-      <created>1685514496281</created>
+      <changelist id="19c0ee18-f643-414d-a63f-be21ce61afa0" name="Changes" comment="" />
+      <created>1686240401603</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685514496281</updated>
-      <workItem from="1685514497790" duration="3110000" />
+      <updated>1686240401603</updated>
+      <workItem from="1686240402712" duration="7000" />
+      <workItem from="1686244953622" duration="362000" />
+      <workItem from="1686311248564" duration="305000" />
+      <workItem from="1686311981236" duration="3257000" />
+      <workItem from="1686315252245" duration="2344000" />
+      <workItem from="1686318292051" duration="2775000" />
+      <workItem from="1686335472229" duration="4730000" />
     </task>
+    <task id="LOCAL-00001" summary="장고 앱 분리함">
+      <created>1686311337980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686311337980</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="장고 앱 분리함" />
+    <option name="LAST_COMMIT_MESSAGE" value="장고 앱 분리함" />
   </component>
 </project>
