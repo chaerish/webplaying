@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+        format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    margin: 2% 2% 0% 2%;
+}
+
+.logo {
+    margin-bottom: 2%;
+    width: 230px;
+    height: 40px;
+}
+
+.user {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.goHome {
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+.goChallenge {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.goMypage {
+    margin-top: 2%;
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+header {
+    border-bottom: 1px solid #3b4f69;
+}
+
+a {
+    text-decoration: none; /*밑줄 없애기*/
+    color: black;
+}
+
+li {
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+.profile_img {
+    margin-top: 2%;
+    margin-left: 45%;
+}
+
+.name {
+    margin-left: 49%;
+    margin-top: 1%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.explain {
+    margin-left: 44.5%;
+    margin-top: 2%;
+}
+
+.profile_detail {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -3%;
+}
+
+.manage_profile {
+    margin-left: 23%;
+    margin-top: 3%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2%;
+    border-width: 50%;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+.manage_info {
+    margin-left: 23%;
+    border-bottom: 1px solid black;
+    padding: 2%;
+    border-width: 50%;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+.manage_friend {
+    margin-left: 23%;
+    border-bottom: 1px solid black;
+    padding: 2%;
+    border-width: 50%;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+.logout {
+    margin-left: 23%;
+    border-bottom: 1px solid black;
+    padding: 2%;
+    border-width: 50%;
+    width: 50%;
+    font-size: 1.3rem;
+}
