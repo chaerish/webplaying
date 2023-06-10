@@ -3,10 +3,10 @@
 //     $("p").toggle();
 // });
 
-const makeCalendar = (date) => {
-    const currentYear = new Date(date).getFullYear();
-    const currentMonth = new Date(date).getMonth() + 1;
-    const currentDay = new Date(date).getDate();
+const getCalendar = (weekDate) => {
+    const currentYear = new Date(weekDate).getFullYear();
+    const currentMonth = new Date(weekDate).getMonth() + 1;
+    const currentDay = new Date(weekDate).getDate();
 
     // const firstDay = new Date(date.setDate(1)).getDay();
     // const lastDay = new Date(currentYear, currentMonth, 0).getDate();
@@ -29,7 +29,7 @@ const makeCalendar = (date) => {
     // }
 
     // document.querySelector(`.bar`).innerHTML = htmlDummy;
-    document.querySelector(`.year-mon`).innerText = `${currentYear} ${currentMonth}`;
+    document.querySelector(`.year-mon`).innerText = `${currentYear} ${currentMonth}월`;
 
     let htmlDummy = '';
     htmlDummy = `<p class="day">${currentMonth}/${currentDay}</p>`;
@@ -55,8 +55,8 @@ const makeCalendar = (date) => {
 
 }
 
-const date = new Date();
-makeCalendar(date);
+const weekDate = new Date();
+getCalendar(weekDate);
 
 
 // 미니 캘린더 프리뷰

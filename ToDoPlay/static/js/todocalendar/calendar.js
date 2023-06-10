@@ -47,7 +47,7 @@ const firstDay = new Date(date.setDate(1)).getDay();
     const date = `${currentYear}-${currentMonth.pad()}-${i.pad()}`
     
     htmlDummy += `
-      <div class="item${i}" onclick="location.href='/calendar/day'">
+      <div class="item" class="${i}" onclick="location.href='/calendar/day'">
         ${i}
         <p>
           ${calendarList[date]?.join('</p><p>') || ''}

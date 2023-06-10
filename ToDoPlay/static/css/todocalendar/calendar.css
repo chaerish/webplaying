@@ -1,6 +1,6 @@
 /* 달력 */
 
-.container {
+.calendarContainer {
     display: flex;
     
     flex-direction: row;

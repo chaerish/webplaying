@@ -1,5 +1,5 @@
 /* The switch - the box around the slider */
-.switch {
+.monthSwitch {
     margin-top: 5%;
     position: relative;
     display: inline-block;
@@ -9,10 +9,10 @@
   }
   
   /* Hide default HTML checkbox */
-  .switch input {display:none;}
+  .monthSwitch input {display:none;}
   
   /* The slider */
-  .slider {
+  .monthSlider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -24,7 +24,7 @@
     transition: .4s;
   }
   
-  .slider:before {
+  .monthSlider:before {
     position: absolute;
     content: "Month";
     text-align: center;
@@ -38,26 +38,26 @@
     transition: .4s;
   }
   
-  input:checked + .slider {
+  input:checked + .monthSlider {
     background-color: #D9D9D9;
   }
   
-  input:focus + .slider {
+  input:focus + .monthSlider {
     box-shadow: 0 0 1px #D9D9D9;
   }
   
-  input:checked + .slider:before {
+  input:checked + .monthSlider:before {
     -webkit-transform: translateX(57px);
     -ms-transform: translateX(57px);
     transform: translateX(57px);
   }
   
   /* Rounded sliders */
-  .slider.round {
+  .monthSlider.round {
     border-radius: 100px;
   }
   
-  .slider.round:before {
+  .monthSlider.round:before {
     border-radius: 90px;
   }
   
