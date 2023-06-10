@@ -1,20 +1,22 @@
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TodoPlay</title>
-        <link href="../css/main.css" rel="stylesheet" type="text/css" />
-        <link href="../css/side-bar.css" rel="stylesheet" type="text/css" />
-        <link href="../css/calendar.css" rel="stylesheet" type="text/css" />
+        <link href="{% static '/css/home/main.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static '/css/todocalendar/side-bar.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static '/css/todocalendar/calendar.css' %}" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <ul class="menu">
-                <li class="logo"><img src="../img/logo.png" /></li>
-                <li class="user">탁호님 안녕하세요!</li>
+                <li class="logo"><img src="{% static '/img/logo.png' %}></li>
+                <li class="user">{{ user }}님 안녕하세요!</li>
                 <li class="goHome"><a href="">홈</a></li>
                 <li class="goChallenge"><a href="">챌린지 둘러보기</a></li>
                 <li class="goMypage"><a href="">마이페이지</a></li>
@@ -77,64 +79,20 @@
                       
                 </div>
 
-
-
                 <p>Today's Todo</p>
                 <div class="Today-todo">
-
-                    <!-- <h3>할 일 등록</h3>
-                    <p>
-                        <input id="new-task" type="text">
-                        <button>추가</button>
-                    </p> -->
-                    <h3>Daily</h3>
-                    <ul id="incomplete-tasks">
+                    {% for i in item_list %}
+                   <h3>{{ i.category.name }}</h3>
+                   <ul id="incomplete-tasks">
                         <li>
                             <input type="checkbox" id="checkBtn" disabled>
-                                <label>밥먹기</label>
-                            
-                            <!-- <button class="edit">Edit</button>
-                            <button class="delete">Delete</button> -->
-                        </li>
-                        <li>
-                            <input type="checkbox" id="checkBtn">
-                                <label>코딩하기</label>
-                            
-                            <!-- <button class="edit">Edit</button>
-                            <button class="delete">Delete</button> -->
-                        </li>
-                        <li>
-                            <input type="checkbox" id="checkBtn">
-                                <label>집가기</label>
-                            
-                            <!-- <button class="edit">Edit</button>
-                            <button class="delete">Delete</button> -->
+                               <label>{{ i.content }}</label>
+
+                             <button class="edit">Edit</button>
+                            <button class="delete" >Delete</button>
                         </li>
                     </ul>
-
-                    <h3>하마 챌린지</h3>
-                    <ul id="challenge">
-                        <li>
-                            <input type="checkbox" id="checkBtn">
-                                <label>물 1L 마셔버리기</label>
-                           
-                            <!-- <button class="edit">Edit</button>
-                            <button class="delete">Delete</button> -->
-                        </li>
-                       
-                    </ul>
-
-                    <!-- <h3>Completed</h3>
-                    <ul id="completed-tasks">
-                        <li>
-                            <input type="checkbox" checked>
-                            <label>See the Doctor</label>
-                            <input type="text">
-                            <button class="edit">Edit</button>
-                            <button class="delete">Delete</button>
-                        </li>
-                    </ul> -->
-
+                    {% endfor %}
                 </div>
             </div>
             
@@ -142,8 +100,8 @@
 
 
     </div>
-          <script src="../js/side-bar.js"></script>
-          <script src="../js/calendar.js"></script>
-          
+          <script src="{% static 'js/todocalendar/side-bar.js' %}"></script>
+          <script src="{% static 'js/todocalendar/calendar.js' %}"></script>
+
     </body>
 </html>
