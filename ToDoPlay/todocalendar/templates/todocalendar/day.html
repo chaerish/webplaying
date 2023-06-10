@@ -56,23 +56,31 @@
                             <input type="checkbox">
                             <label for="todo">{{ item.content }}</label>
                         </div>
+                        <input type="button" class="delete_item" value="삭제" onclick="delete_item({{ item.pk }})"></input>
                     </div>
                 </div>
                 {% endfor %}
                 <form method="POST" action="" style="margin-left:40%;padding-top: 5%">
                 {% csrf_token %}
                     <select name="category">
-                        {% for c in item_list %}
-                            <option value="{{ c.category.pk }}">{{ c.category }}</option>
+                        {% for category in category_list %}
+                            <option value="{{ category.pk }}">{{ category.name }}</option>
                         {% endfor %}
                     </select>
                      <input type="text" name="todo" placeholder="할일을 입력하세요">
                     <button type="submit">추가</button>
                 </form>
             </div>
+            <a href="/calendar/month" role="button">month로 돌아가기</a>
         </div>
         <script src="{% static '/js/todocalendar/day.js' %}"></script>
     </div>
-</body>
 
+</body>
+{#삭제 버튼 구현한거에여 #}
+<script>
+    const delete_item = pk => {
+	location.href=`/calendar/delete_item/${pk}`;
+}
+</script>
 </html>

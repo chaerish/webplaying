@@ -5,82 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19c0ee18-f643-414d-a63f-be21ce61afa0" name="Changes" comment="장고 앱 분리함">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/webplaying.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/todoplay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/find.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/change_pw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/find.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/find_id.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/find_id_result.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/find_pw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/find_pw_result.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/home/signup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/side-bar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/todocalendar/week.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/login_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/day.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/side-bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/todocalendar/week.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/day.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/month.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/templates/todocalendar/week.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todocalendar/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todochallenge/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/find_pw_result.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/calendar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/day.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/side-bar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/todocalendar/css/week.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/day.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/side-bar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/todocalendar/js/week.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todocalendar/templates/day.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todocalendar/templates/find.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todocalendar/templates/month.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todocalendar/templates/week.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../요구사항 명세서 3팀 1.0.1 ver .doc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +108,8 @@
       <workItem from="1686315252245" duration="2344000" />
       <workItem from="1686318292051" duration="2775000" />
       <workItem from="1686335472229" duration="4730000" />
+      <workItem from="1686340224728" duration="104000" />
+      <workItem from="1686371583785" duration="4123000" />
     </task>
     <task id="LOCAL-00001" summary="장고 앱 분리함">
       <created>1686311337980</created>

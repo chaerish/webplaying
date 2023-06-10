@@ -112,3 +112,5 @@ const goToday = () => {
     miniDate = new Date();
     renderCalendar();
 }
+//삭제
+

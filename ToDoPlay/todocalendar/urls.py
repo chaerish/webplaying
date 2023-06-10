@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('month', views.month),
-    path('day', views.day),
+    path('day', views.day,name="day"),
+    path('delete_item/<int:itempk>',views.delete_item)
 
 ]
