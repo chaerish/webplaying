@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="{% static '/css/todocalendar/day.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li class="logo"><img src="{% static '/img/logo.png' %}" /></li>
+            <li class="user">탁호님 안녕하세요!</li>
+            <li class="goHome">홈</li>
+            <li class="goChallenge">챌린지 둘러보기</li>
+            <li class="goMypage">마이페이지</li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="mini-cal">
+                <div class="preview">
+                    <div class="miniHeader">
+                        <button class="year-month" onclick="goToday()"></button>
+                    </div>
+                    <div class="main">
+                        <div class="days">
+                            <div class="day">S</div>
+                            <div class="day">M</div>
+                            <div class="day">T</div>
+                            <div class="day">W</div>
+                            <div class="day">T</div>
+                            <div class="day">F</div>
+                            <div class="day">S</div>
+                        </div>
+                        <div class="dates"></div>
+                    </div>
+                </div>
+                <div class="check-cal">
+                </div>
+            </div>
+            <div class="daliy">
+                <div class="todo-bar">
+                    <p class="mon-day"></p>
+                    <p class="ment">오늘의 할 일</p>
+                </div>
+                {% for item in item_list %}
+                <div class="todo-list">
+                    <div class="one">
+                        <p class="category">{{ item.category }}</p>
+                        <div class="check">
+                            <input type="checkbox">
+                            <label for="todo">{{ item.content }}</label>
+                        </div>
+                        <input type="button" class="delete_item" value="삭제" onclick="delete_item({{ item.pk }})"></input>
+                    </div>
+                </div>
+                {% endfor %}
+                <form method="POST"  style="margin-left:40%;padding-top: 5%">
+                {% csrf_token %}
+                    <select name="category">
+                        {% for category in category_list %}
+                            <option value="{{ category.pk }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                     <input type="text" name="todo" placeholder="할일을 입력하세요">
+                    <button type="submit">추가</button>
+                </form>
+            </div>
+            <a href="/calendar/month" role="button">month로 돌아가기</a>
+        </div>
+        <script src="{% static '/js/todocalendar/day.js' %}"></script>
+    </div>
+
+</body>
+{#삭제 버튼 구현한거에여 #}
+<script>
+    const delete_item = pk => {
+        location.href = `/calendar/delete_item/${pk}`;
+    }
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    if (urlParams.has('date')) {
+        const date = urlParams.get('date');
+
+}
+
+
+
+
+</script>
+</html>
