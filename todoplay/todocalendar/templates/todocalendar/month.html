@@ -15,8 +15,8 @@
     <body>
         <header>
             <ul class="menu">
-                <li class="logo"><img src="{% static '/img/logo.png' %}></li>
-                <li class="user">{{ user }}님 안녕하세요!</li>
+                <li class="logo"><img src="{% static '/img/logo.png' %}"></li>
+                <li class="user" style="margin-left:5%;">{{ user }}님 안녕하세요!</li>
                 <li class="goHome"><a href="">홈</a></li>
                 <li class="goChallenge"><a href="">챌린지 둘러보기</a></li>
                 <li class="goMypage"><a href="">마이페이지</a></li>
@@ -45,7 +45,6 @@
               <div>FRI</div>
               <div id="weekend">SAT</div>
             </div>
-            <div>hi</div>
         
             <div class="grid dateBoard">
             </div>
@@ -106,15 +105,26 @@
           <script src="{% static 'js/todocalendar/calendar.js' %}"></script>
 
     </body>
-<script>
 
- const data = [
-        {
-            date: '{{ date|safe }}',
-            content: '{{ content|safe }}'
-        },
-  ];
-    console.log(data)
+<script>
+const data_list = JSON.parse('{{ citem_list|safe }}');
+console.log(data_list);
+
+const data = [];
+
+for (let i = 0; i < data_list.length; i++) {
+  const newItem = {
+    date: data_list[i].date,
+    content: data_list[i].content
+  };
+  data.push(newItem);
+}
+
+console.log(data);
+
+
+
+
     const calendarList = data.reduce(
   (acc, v) =>
     ({ ...acc, [v.date]: [...(acc[v.date] || []), v.content] })
@@ -203,6 +213,7 @@ function getDateInfo(day) {
   const delete_item = pk => {
         location.href = `/calendar/delete_item/${pk}`;
     }
+
 
 
 </script>

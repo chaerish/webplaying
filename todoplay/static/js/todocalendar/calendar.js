@@ -1,8 +1,7 @@
-// 임시 데이터
 
 // const data = {
-//   date: date1,
-//   content: content1
+//   date: 2023-06-01,
+//   content: 할일,
 // };
 
 
