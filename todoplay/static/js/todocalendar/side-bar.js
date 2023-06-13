@@ -1,5 +1,5 @@
-var check = $("input[type='checkbox']");
-check.click(function(){
+var monthCheck = $("input[type='monthCheckbox']");
+monthCheck.click(function(){
 	$("p").toggle();
 });
 

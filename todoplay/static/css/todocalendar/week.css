@@ -1,38 +1,4 @@
-.menu {
-    list-style-type: none;
-    display: flex;
-    margin-top: 2%;
-}
 
-.logo {
-    margin-left: -2%;
-    width: 255px;
-    height: 49px;
-}
-
-.user {
-    margin-top: 2%;
-    margin-left: 1%;
-}
-
-.goHome {
-    margin-top: 2%;
-    margin-left: 48%;
-}
-
-.goChallenge {
-    margin-top: 2%;
-    margin-left: 5%;
-}
-
-.goMypage {
-    margin-top: 2%;
-    margin-left: 5%;
-}
-
-header {
-    border-bottom: 1px solid #3b4f69;
-}
 
 .container {
     display: flex;
@@ -49,24 +15,26 @@ header {
 .bar-menu {
     list-style-type: none;
     display: flex;
+    padding: 0 2.1rem;
 }
 
 .year-mon {
-    margin-top: 1%;
-    margin-right: 10%;
-    font-size: 1.3rem;
+    text-align: left;
+    padding: 1.7rem 32.5rem 2rem 2rem; 
+    font-size: 24px;
     font-weight: 700;
 }
 
 .switch-btn {
     margin-top: 1%;
-    margin-left: 70%;
+    margin-left: 2rem;
 }
 
 
 /* The switch - the box around the slider */
 
 .switch {
+    margin-right: 20%;
     position: relative;
     display: inline-block;
     width: 140px;

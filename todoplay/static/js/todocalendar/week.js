@@ -3,10 +3,10 @@
 //     $("p").toggle();
 // });
 
-const makeCalendar = (date) => {
-    const currentYear = new Date(date).getFullYear();
-    const currentMonth = new Date(date).getMonth() + 1;
-    const currentDay = new Date(date).getDate();
+const getCalendar = (weekDate) => {
+    const currentYear = new Date(weekDate).getFullYear();
+    const currentMonth = new Date(weekDate).getMonth() + 1;
+    const currentDay = new Date(weekDate).getDate();
 
     // const firstDay = new Date(date.setDate(1)).getDay();
     // const lastDay = new Date(currentYear, currentMonth, 0).getDate();
@@ -29,7 +29,7 @@ const makeCalendar = (date) => {
     // }
 
     // document.querySelector(`.bar`).innerHTML = htmlDummy;
-    document.querySelector(`.year-mon`).innerText = `${currentYear} ${currentMonth}`;
+    document.querySelector(`.year-mon`).innerText = `${currentYear} ${currentMonth}월`;
 
     let htmlDummy = '';
     htmlDummy = `<p class="day">${currentMonth}/${currentDay}</p>`;
@@ -55,17 +55,17 @@ const makeCalendar = (date) => {
 
 }
 
-const date = new Date();
-makeCalendar(date);
+const weekDate = new Date();
+getCalendar(weekDate);
 
 
 // 미니 캘린더 프리뷰
-let miniDate = new Date();
+let sideDate = new Date();
 
 const renderCalendar = () => {
 
-    const viewYear = miniDate.getFullYear(); // 해당 년 받아오기
-    const viewMonth = miniDate.getMonth(); // 해당 월 받아오기
+    const viewYear = sideDate.getFullYear(); // 해당 년 받아오기
+    const viewMonth = sideDate.getMonth(); // 해당 월 받아오기
 
     var monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
@@ -121,9 +121,9 @@ const renderCalendar = () => {
 
     const today = new Date(); // 오늘 날짜 표기하기 위해
     if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) { // 현재 월을 보고 있는게 맞는지
-        for (let miniDate of document.querySelectorAll('.this')) { // this 태그 찾기
-            if (+miniDate.innerText === today.getDate()) { // +연산자로 숫자로 변경
-                miniDate.classList.add('today'); // 해당 태그에 today 클래스 추가
+        for (let sideDate of document.querySelectorAll('.this')) { // this 태그 찾기
+            if (+sideDate.innerText === today.getDate()) { // +연산자로 숫자로 변경
+                sideDate.classList.add('today'); // 해당 태그에 today 클래스 추가
                 break;
             }
         }
@@ -133,6 +133,6 @@ const renderCalendar = () => {
 renderCalendar();
 
 const goToday = () => {
-    miniDate = new Date();
+    sideDate = new Date();
     renderCalendar();
 }
