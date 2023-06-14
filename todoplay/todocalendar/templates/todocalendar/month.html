@@ -10,7 +10,7 @@
         <link href="{% static '/css/home/main.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/css/todocalendar/side-bar.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/css/todocalendar/calendar.css' %}" rel="stylesheet" type="text/css" />
-        <link href="{% static '/css/todocalendar/week.css' %}" rel="stylesheet" type="text/css" />
+        <!-- <link href="{% static '/css/todocalendar/week.css' %}" rel="stylesheet" type="text/css" /> -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
     </head>
     <body>
@@ -26,9 +26,9 @@
     
 
     <!-- 월간 화면 (month) -->
-    <section id="month">
+    <!-- <section id="month"> -->
         <!-- 전체 캘린더 flex -->
-        <div class="calendarContainer">
+        <div class="container">
             <!-- 메인 캘린더 -->
             <div class='rap'>    
                 <div class="header">
@@ -53,12 +53,12 @@
             <!-- 사이드바 flex container -->
             <div class="side-bar">
                 <div class="viewOption">
-                    <label class="monthSwitch">
+                    <label class="switch">
                         <input 
-                            type="monthCheckbox"
+                            type="checkbox"
                             onclick="monthToWeek()"
                         >
-                        <span class="monthSlider round"></span>
+                        <span class="slider round"></span>
                     </label>
                 </div>  
                 
@@ -101,10 +101,12 @@
             </div>
         </div>
 
-    </section>
+    <!-- </section> -->
+
+
 
     <!-- 주간 화면 (week) -->
-    <section id="week">
+    <!-- <section id="week">
 
         <div class="container">
             <div class="bar">
@@ -119,8 +121,8 @@
                     </label></li>
                 </ul>
             </div>
-            <!-- <section class="line-top"></section>
-            <section class="line-bottom"></section> -->
+            /* <section class="line-top"></section>
+            <section class="line-bottom"></section> */
             <div class="content">
                 <div class="week">
                     <section class="rec1">
@@ -167,11 +169,10 @@
     
             </div>
 
-    </section>
+    </section> -->
 
-
-          <script src="{% static 'js/todocalendar/side-bar.js' %}"></script>
-          <script src="{% static 'js/todocalendar/calendar.js' %}"></script>
-          <script src="{% static 'js/todocalendar/week.js' %}"></script>
-          <script src="{% static 'js/todocalendar/index.js' %}"></script>
+        <script src="{% static 'js/todocalendar/calendar.js' %}"></script>  
+        <script src="{% static 'js/todocalendar/side-bar.js' %}"></script>
+        <!-- <script src="{% static 'js/todocalendar/week.js' %}"></script> -->
+        <script src="{% static 'js/todocalendar/index.js' %}"></script>
 </html>

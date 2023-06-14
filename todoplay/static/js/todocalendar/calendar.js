@@ -1,9 +1,6 @@
 // 임시 데이터
 const data = [
-    { date: '2023-06-12', content: '자구 시험' },
-    { date: '2023-06-14', content: '운체 시험' },
-    { date: '2023-06-14', content: '교양 시험' },
-    { date: '2023-06-21', content: '졍이 생일😻' },
+    
   ];
   
   
@@ -66,19 +63,20 @@ const data = [
     document.querySelector(`.dateTitle`).innerText = `${currentYear} ${currentMonth}월`;
   }
   
-  const date = new Date('2023-06-02');
-  
-  makeCalendar(date);
-  
-  // 이전달 이동
-  document.querySelector(`.prevDay`).onclick = () => {
-  makeCalendar(new Date(date.setMonth(date.getMonth() - 1)));
-  }
-  
-  // 다음달 이동
-  document.querySelector(`.nextDay`).onclick = () => {
-  makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
-  }
+  const date = new Date();
+  console.log(date);
+
+makeCalendar(date);
+
+// 이전달 이동
+document.querySelector(`.prevDay`).onclick = () => {
+makeCalendar(new Date(date.setMonth(date.getMonth() - 1)));
+}
+
+// 다음달 이동
+document.querySelector(`.nextDay`).onclick = () => {
+makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+}
   // document.getElementsByClassName("item${i}").addEventListener("click", e=> {
   //   location.href="/todocalendar/templates/todocalendar/day.html"
   // });
