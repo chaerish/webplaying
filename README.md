@@ -7,7 +7,7 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |역할|팀장,백엔드|백엔드|프론트엔드|프론트엔드|프론트엔드|
 |학번|202010852|202010049|202110963|202010060|202110927|
-|이름|[김채연🐣](https://github.com/chaerish)|[김지영🍳](https://github.com/jeeeyyoung)|[이서연🐰](https://github.com/noeyoes)|[이유민🦄](https://github.com/whatdoyumin)|[박서연🐱](https://github.com/yxoni)|
+|이름|[김채연🐣](https://github.com/chaerish)|[김지영🍳](https://github.com/jeeeyoungkim)|[이서연🐰](https://github.com/noeyoes)|[이유민🦄](https://github.com/whatdoyumin)|[박서연🐱](https://github.com/yxoni)|
 
 <div align="center">
   이름을 클릭하면 팀원들 깃허브를 구경할 수 있어요!😆
