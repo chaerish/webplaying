@@ -87,35 +87,44 @@ a {
     margin-top: 3%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 2%;
+    padding: 1.7%;
     border-width: 50%;
     width: 50%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .manage_info {
     margin-left: 23%;
     border-bottom: 1px solid black;
-    padding: 2%;
+    padding: 1.7%;
     border-width: 50%;
     width: 50%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .manage_friend {
     margin-left: 23%;
     border-bottom: 1px solid black;
-    padding: 2%;
+    padding: 1.7%;
     border-width: 50%;
     width: 50%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .logout {
     margin-left: 23%;
     border-bottom: 1px solid black;
-    padding: 2%;
+    padding: 1.7%;
     border-width: 50%;
     width: 50%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.delete_uesr {
+    margin-left: 23%;
+    border-bottom: 1px solid black;
+    padding: 1.7%;
+    border-width: 50%;
+    width: 50%;
+    font-size: 1.2rem;
 }
