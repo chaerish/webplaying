@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="../css/challenge_detail.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
+    <body>
+        <header>
+            <ul class="menu">
+                <li class="logo"><img src="../img/logo.png" /></li>
+                <li class="user">탁호님 안녕하세요!</li>
+                <li class="goHome"><a href="">홈</a></li>
+                <li class="goChallenge"><a href="">챌린지 둘러보기</a></li>
+                <li class="goMypage"><a href="mypage.html">마이페이지</a></li>
+            </ul>
+        </header>
+        <main>
+            <ul class="challenge_list">
+                <li id="challenge">
+                    <div class="challenge_info">
+                        <p class="challenge_title">하마챌린지</p>
+                        <p class="challenge_period">4/1~4/22</p>
+                        <button
+                            id="send_request"
+                            name="send_request"
+                            style="width: 100px; height: 90px"
+                        >
+                            12/100 <br />
+                            참가 신청
+                        </button>
+                    </div>
+                    <p class="challenge_explain">
+                        물을 매일매일 먹고싶은 사람들
+                    </p>
+                </li>
+            </ul>
+            <div class="detail">
+                <div class="top">
+                    <img
+                        class="profile_img"
+                        src="../img/profile.png"
+                        style="width: 50px; height: 50px"
+                    />
+                    <div class="challenge_user">탁호님의 챌린지</div>
+                </div>
+                <div class="middle">
+                    <ul class="info_list">
+                        <li>챌린지 기간 4/1~4/22</li>
+                        <li>참여인원 12명</li>
+                        <li>오늘 총 8명이 완료했어요</li>
+                    </ul>
+                    <p class="explain">
+                        안녕하세요. 저는 문어인데도 평소에 물을 너무 안먹어서
+                        고민이에요. <br />
+                        우리 모두 하루에 1L씩 물을 먹어봐요!
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div id="challenge_name">하마챌린지</div>
+                    <input type="checkbox" id="myCheckbox" />
+                    <label for="myCheckbox">물 1L 마셔버리기</label>
+                </div>
+            </div>
+            <input
+                class="join_challenge_btn"
+                type="submit"
+                value="참가 신청하기"
+                style="width: 280px; height: 60px"
+            />
+            <input
+                class="stop_challenge_btn"
+                type="submit"
+                value="챌린지 나가기"
+                style="width: 280px; height: 60px"
+            />
+        </main>
+    </body>
+</html>

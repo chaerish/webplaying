@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+        format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    margin: 2% 2% 0% 2%;
+}
+
+.logo {
+    margin-bottom: 2%;
+    width: 230px;
+    height: 40px;
+}
+
+.user {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.goHome {
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+.goChallenge {
+    margin-top: 2%;
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+.goMypage {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+header {
+    border-bottom: 1px solid #3b4f69;
+}
+
+a {
+    text-decoration: none; /*밑줄 없애기*/
+    color: black;
+}
+
+li {
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+.search {
+    position: relative;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.challenge_list {
+    list-style-type: none;
+}
+
+#challenge {
+    background-color: #d9d9d9;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 26.5%;
+    padding: 0.5%;
+    width: 45%;
+}
+
+.challenge_info {
+    display: flex;
+}
+
+.challenge_title {
+    display: flex;
+    font-weight: 800;
+    font-size: 1.2rem;
+    float: left;
+    margin-left: 1%;
+}
+
+.challenge_period {
+    display: flex;
+    margin-left: 3%;
+    margin-top: 4%;
+}
+
+.challenge_explain {
+    display: block;
+    text-align: left;
+    margin-top: -4%;
+    margin-left: 1%;
+}
+
+#send_request {
+    margin-top: 2%;
+    margin-left: 55%;
+    background-color: #3b4f69;
+    color: white;
+    border: none;
+    font-weight: 800;
+}
+
+.detail {
+    border: 1px solid black;
+    width: 44.5%;
+    margin-left: 28.6%;
+}
+
+.top {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.profile_img {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.challenge_user {
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+.info_list {
+    font-size: 0.9rem;
+    display: flex;
+}
+
+.explain {
+    margin-left: 2%;
+}
+
+.middle {
+    border-bottom: 1px solid black;
+}
+
+#challenge_name {
+    margin-top: 1%;
+    margin-left: 1%;
+    background-color: #d9d9d9;
+    border-radius: 6.25rem;
+    width: 13%;
+    text-align: center;
+}
+
+#myCheckbox {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.bottom {
+    padding-bottom: 20%;
+}
+
+.join_challenge_btn {
+    background-color: #3b4f69;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 2%;
+    margin-left: 40%;
+}
+
+.stop_challenge_btn {
+    background-color: #e85e84;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 1%;
+    margin-left: 40%;
+}
