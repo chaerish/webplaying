@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Todoplay</title>
-        <link href="../css/find_pw.css" rel="stylesheet" type="text/css" />
+        <link href="{% static '/css/home/find_pw.css' %}" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div class="logo"><img src="../img/logo.png" /></div>
+        <div class="logo"><img src="{% static '/img/logo.png' %}" /></div>
         <div class="main">
             <h1 class="main_txt">FIND</h1>
             <div class="select_button">
