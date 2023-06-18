@@ -10,23 +10,24 @@
         <link href="{% static '/css/home/main.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/css/todocalendar/side-bar.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/css/todocalendar/calendar.css' %}" rel="stylesheet" type="text/css" />
-        <!-- <link href="{% static '/css/todocalendar/week.css' %}" rel="stylesheet" type="text/css" /> -->
+        <link href="{% static '/css/todocalendar/week.css' %}" rel="stylesheet" type="text/css" />
+        
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <ul class="menu">
                 <li class="logo"><img src="{% static '/img/logo.png' %}"></li>
-                <li class="user">{{ user }}님 안녕하세요!</li>
-                <li class="goHome"><a href="">홈</a></li>
+                <li class="user" style="margin-left:5%;">{{ user }}님 안녕하세요!</li>
+                <li class="goHome"><a href="/calendar/month">홈</a></li>
                 <li class="goChallenge"><a href="">챌린지 둘러보기</a></li>
                 <li class="goMypage"><a href="">마이페이지</a></li>
             </ul>
         </header>
-    
 
-    <!-- 월간 화면 (month) -->
-    <!-- <section id="month"> -->
+
+      <!-- 월간 화면 (month) -->
+      <section id="month">
         <!-- 전체 캘린더 flex -->
         <div class="container">
             <!-- 메인 캘린더 -->
@@ -38,25 +39,27 @@
                 </div>
                 
                 <div class="grid dateHead">
-                <div id="weekend">SUN</div>
-                <div>MON</div>
-                <div>TUE</div>
-                <div>WED</div>
-                <div>THU</div>
-                <div>FRI</div>
-                <div id="weekend">SAT</div>
+                  <div id="weekend">SUN</div>
+                  <div>MON</div>
+                  <div>TUE</div>
+                  <div>WED</div>
+                  <div>THU</div>
+                  <div>FRI</div>
+                  <div id="weekend">SAT</div>
                 </div>
             
-                <div class="grid dateBoard"></div>
-            </div>
+                <div class="grid dateBoard">
+                </div>
+              </div>
             
             <!-- 사이드바 flex container -->
             <div class="side-bar">
+
                 <div class="viewOption">
                     <label class="switch">
                         <input 
-                            type="checkbox"
-                            onclick="monthToWeek()"
+                          type="checkbox"
+                          onclick="monthToWeek()"
                         >
                         <span class="slider round"></span>
                     </label>
@@ -79,59 +82,55 @@
                             </div>
                             <div class="dates"></div>
                     </div>
-                        
+                          
                     </div>
 
                     <p>Today's Todo</p>
                     <div class="Today-todo">
                         {% for i in item_list %}
-                    <h3>{{ i.category.name }}</h3>
-                    <ul id="incomplete-tasks">
+
+                      <h3>{{ i.category.name }}</h3>
+                      <ul id="incomplete-tasks">
                             <li>
                                 <input type="checkbox" id="checkBtn" disabled>
-                                <label>{{ i.content }}</label>
+                                  <label>{{ i.content }}</label>
 
-                                <button class="edit">Edit</button>
-                                <button class="delete" >Delete</button>
+                                <button class="delete" onclick="delete_item({{ i.pk }})" >Delete</button>
                             </li>
                         </ul>
                         {% endfor %}
                     </div>
                 </div>
+                
             </div>
         </div>
+      </section>
 
-    <!-- </section> -->
+      <!-- 주간 화면 (week) -->
+      <section id="week">
 
-
-
-    <!-- 주간 화면 (week) -->
-    <!-- <section id="week">
-
-        <div class="container">
-            <div class="bar">
-                <ul class="bar-menu">
-                    <li class="year-mon"></li>
-                    <li class="switch-btn">
-                        <label class="switch">
-                        <input 
-                            type="checkbox"
-                            onclick="weekToMonth()">
-                        <span class="slider round"></span>
-                    </label></li>
-                </ul>
+        <div class="week-container">
+            <div class="bar-menu">
+                <div class="year-mon"></div>
+                <div class="week-switch-btn">
+                    <label class="week-switch">
+                    <input 
+                        type="checkbox"
+                        onclick="weekToMonth()">
+                    <span class="week-slider round"></span>
+                    </label>
+                </div>
             </div>
-            /* <section class="line-top"></section>
-            <section class="line-bottom"></section> */
+            
             <div class="content">
                 <div class="week">
                     <section class="rec1">
-                        <div class="preview">
-                            <div class="miniHeader">
-                                <button class="year-month" onclick="goToday()"></button>
+                        <div class="week-preview">
+                            <div class="week-miniHeader">
+                                <button class="week-year-month" onclick="goToday()"></button>
                             </div>
-                            <div class="main">
-                                <div class="days">
+                            <div class="week-main">
+                                <div class="week-days">
                                     <div class="day">S</div>
                                     <div class="day">M</div>
                                     <div class="day">T</div>
@@ -140,7 +139,7 @@
                                     <div class="day">F</div>
                                     <div class="day">S</div>
                                 </div>
-                                <div class="dates"></div>
+                                <div class="week-dates"></div>
                             </div>
     
                     </section>
@@ -166,13 +165,127 @@
                     </section>
                     </div>
                 </div>
-    
-            </div>
+              </div>
+            </section>
 
-    </section> -->
 
-        <script src="{% static 'js/todocalendar/calendar.js' %}"></script>  
-        <script src="{% static 'js/todocalendar/side-bar.js' %}"></script>
-        <!-- <script src="{% static 'js/todocalendar/week.js' %}"></script> -->
-        <script src="{% static 'js/todocalendar/index.js' %}"></script>
+          <script src="{% static 'js/todocalendar/side-bar.js' %}"></script>
+          <script src="{% static 'js/todocalendar/index.js' %}"></script>
+          <script src="{% static 'js/todocalendar/week.js' %}"></script>
+          
+    </body>
+
+
+    <!-- month.js -->
+    <script>
+    const data_list = JSON.parse('{{ citem_list|safe }}');
+    console.log(data_list);
+
+    const data = [];
+
+    for (let i = 0; i < data_list.length; i++) {
+      const newItem = {
+        date: data_list[i].date,
+        content: data_list[i].content
+      };
+      data.push(newItem);
+    }
+
+    console.log(data);
+
+
+
+
+        const calendarList = data.reduce(
+      (acc, v) =>
+        ({ ...acc, [v.date]: [...(acc[v.date] || []), v.content] })
+      , {}
+    );
+
+    // pad method
+    Number.prototype.pad = function() {
+      return this > 9 ? this : '0' + this;
+    }
+
+    // 달력 생성
+    const makeCalendar = (date) => {
+      // 현재의 년도와 월 받아오기
+      const currentYear = new Date(date).getFullYear();
+      const currentMonth = new Date(date).getMonth() + 1;
+
+      // 한달전의 마지막 요일
+    const firstDay = new Date(date.setDate(1)).getDay();
+      // 현재 월의 마지막 날 구하기
+      const lastDay = new Date(currentYear, currentMonth, 0).getDate();
+
+      // 남은 박스만큼 다음달 날짜 표시
+      const limitDay = firstDay + lastDay;
+      const nextDay = Math.ceil(limitDay / 7) * 7;
+
+      let htmlDummy = '';
+
+
+      // 한달전 날짜 표시하기
+      for (let i = 0; i < firstDay; i++) {
+        htmlDummy += `<div class="noColor"></div>`;
+      }
+
+      // 이번달 날짜 표시하기
+      for (let i = 1; i <= lastDay; i++) {
+        const date = `${currentYear}-${currentMonth.pad()}-${i.pad()}`
+
+        htmlDummy += `
+          <div class="item" class="${i}" onclick="getDateInfo('${i}')">
+            ${i}
+            <p>
+              ${calendarList[date]?.join('</p><p>') || ''}
+            </p>
+          </div>
+        `;
+      }
+
+      // 다음달 날짜 표시하기
+      for (let i = limitDay; i < nextDay; i++) {
+        htmlDummy += `<div class="noColor"></div>`;
+      }
+
+
+      document.querySelector(`.dateBoard`).innerHTML = htmlDummy;
+      document.querySelector(`.dateTitle`).innerText = `${currentYear} ${currentMonth}월`;
+    }
+
+    const date = new Date('2023-06-02');
+
+    makeCalendar(date);
+
+    // 이전달 이동
+    document.querySelector(`.prevDay`).onclick = () => {
+        makeCalendar(new Date(date.setMonth(date.getMonth() - 1)));
+    }
+
+    // 다음달 이동
+    document.querySelector(`.nextDay`).onclick = () => {
+        makeCalendar(new Date(date.setMonth(date.getMonth() + 1)));
+    }
+    //날짜 추출
+    function getDateInfo(day) {
+            const currentDate = new Date(date);
+            const currentMonth = currentDate.getMonth() + 1;
+            const currentYear = currentDate.getFullYear();
+
+            const dateInfo = {
+                data: `${currentYear}-${currentMonth}-${day}`
+            };
+            const encodedData = encodeURIComponent(JSON.stringify(dateInfo));
+            const url = `/calendar/day?data=${encodedData}`;
+            window.location.href = url;
+
+    };
+      const delete_item = pk => {
+            location.href = `/calendar/delete_item/${pk}`;
+        }
+
+
+
+    </script>
 </html>

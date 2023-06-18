@@ -1,56 +1,30 @@
-// var check = $("input[type='checkbox']");
-// check.click(function() {
-//     $("p").toggle();
-// });
-
 const getCalendar = (weekDate) => {
     const currentYear = new Date(weekDate).getFullYear();
     const currentMonth = new Date(weekDate).getMonth() + 1;
     const currentDay = new Date(weekDate).getDate();
 
-    // const firstDay = new Date(date.setDate(1)).getDay();
-    // const lastDay = new Date(currentYear, currentMonth, 0).getDate();
-
-    // const limitDay = firstDay + lastDay;
-    // const nextDay = Math.ceil(limitDay / 7) * 7;
-
-    // let htmlDummy = '';
-
-    // for (let i = 0; i < firstDay; i++) {
-    //   htmlDummy += `<div class="noColor"></div>`;
-    // }
-
-    // for (let i = 1; i <= lastDay; i++) {    
-    //   htmlDummy += `<div>${i}</div>`;
-    // }
-
-    // for (let i = limitDay; i < nextDay; i++) {
-    //   htmlDummy += `<div class="noColor"></div>`;
-    // }
-
-    // document.querySelector(`.bar`).innerHTML = htmlDummy;
     document.querySelector(`.year-mon`).innerText = `${currentYear} ${currentMonth}월`;
 
     let htmlDummy = '';
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay}</p>`;
     document.querySelector(`.rec2`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+1}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+1}</p>`;
     document.querySelector(`.rec3`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+2}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+2}</p>`;
     document.querySelector(`.rec4`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+3}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+3}</p>`;
     document.querySelector(`.rec5`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+4}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+4}</p>`;
     document.querySelector(`.rec6`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+5}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+5}</p>`;
     document.querySelector(`.rec7`).innerHTML = htmlDummy;
 
-    htmlDummy = `<p class="day">${currentMonth}/${currentDay+6}</p>`;
+    htmlDummy = `<p class="week-day">${currentMonth}/${currentDay+6}</p>`;
     document.querySelector(`.rec8`).innerHTML = htmlDummy;
 
 }
@@ -62,7 +36,7 @@ getCalendar(weekDate);
 // 미니 캘린더 프리뷰
 let sideDate = new Date();
 
-const renderCalendar = () => {
+const createCalendar = () => {
 
     const viewYear = sideDate.getFullYear(); // 해당 년 받아오기
     const viewMonth = sideDate.getMonth(); // 해당 월 받아오기
@@ -71,7 +45,7 @@ const renderCalendar = () => {
         "July", "August", "September", "October", "November", "December"
     ]; // 달 이름을 영어로 출력하기 위한 배열
 
-    document.querySelector(".year-month").textContent = `${monthNames[viewMonth]}`;
+    document.querySelector(".week-year-month").textContent = `${monthNames[viewMonth]}`;
 
     const prevLast = new Date(viewYear, viewMonth, 0); // 지난달의 마지막 날 Date 객체
     const thisLast = new Date(viewYear, viewMonth + 1, 0); // 이번달의 마지막 날 Date 객체
@@ -87,20 +61,13 @@ const renderCalendar = () => {
     const thisDates = [...Array(TLDate + 1).keys()].slice(1);
     const nextDates = []; // 다음달 날짜
 
-    // Array(n) => 길이가 n인 배열 생성
-    // keys() => 0부터 n -1 까지의 배열 반복자 생성(내부요소 순회) ==> 이번달 마지막 날짜 + 1을 n에 전달
-    // slice(1) => 제일 앞에 있는 0을 없애기 위해
-
     if (PLDay !== 6) { // 이전 달을 표현할 날짜 생성 (지난달 마지막 요일이 토요일(6) 이면 굳이 그릴 그릴 필요 없음)
         for (let i = 0; i < PLDay + 1; i++) {
             prevDates.unshift(PLDate - i);
         }
     }
 
-    //unshift() => 배열의 앞에 아이템을 추가한다. 새로운 요소를 배열의 맨 앞쪽에 추가하고 새로운 길이 반환
-    // 0부터 시작해서 지난달 마지막 요일이 될 때까지 반복하게 작성, 지난달의 마지막 날짜부터 1씩 줄어든 값을 배열 앞쪽으로 채워넣음
-
-    for (let i = 1; i < 7 - TLDay; i++) {
+        for (let i = 1; i < 7 - TLDay; i++) {
         nextDates.push(i); // 이번달 마지막 날짜의 요일을 기준으로 필요한 개수를 파악해서 1부터 1씩 증가시키며 하나씩 채워넣음
     }
 
@@ -114,25 +81,25 @@ const renderCalendar = () => {
             'this' // 이번달
             :
             'other'; // 나머지 (span대그로 감싸 classa 로 지정)
-        dates[i] = `<button class="date"><span class="${condition}">${date}</span></button>`;
+        dates[i] = `<button class="week-date"><span class="${condition}">${date}</span></button>`;
     })
 
-    document.querySelector('.dates').innerHTML = dates.join('');
+    document.querySelector('.week-dates').innerHTML = dates.join('');
 
-    const today = new Date(); // 오늘 날짜 표기하기 위해
-    if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) { // 현재 월을 보고 있는게 맞는지
+    const weekToday = new Date(); // 오늘 날짜 표기하기 위해
+    if (viewMonth === weekToday.getMonth() && viewYear === weekToday.getFullYear()) { // 현재 월을 보고 있는게 맞는지
         for (let sideDate of document.querySelectorAll('.this')) { // this 태그 찾기
-            if (+sideDate.innerText === today.getDate()) { // +연산자로 숫자로 변경
-                sideDate.classList.add('today'); // 해당 태그에 today 클래스 추가
+            if (+sideDate.innerText === weekToday.getDate()) { // +연산자로 숫자로 변경
+                sideDate.classList.add('weekToday'); // 해당 태그에 today 클래스 추가
                 break;
             }
         }
     }
 }
 
-renderCalendar();
+createCalendar();
 
-const goToday = () => {
+const goWeekToday = () => {
     sideDate = new Date();
-    renderCalendar();
+    createCalendar();
 }

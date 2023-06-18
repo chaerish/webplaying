@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="{% static '/css/todocalendar/day.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static '/css/home/main.css' %}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <ul class="menu">
             <li class="logo"><img src="{% static '/img/logo.png' %}" /></li>
             <li class="user">탁호님 안녕하세요!</li>
-            <li class="goHome">홈</li>
+            <li class="goHome"><a href="/calendar/month" role="button">홈</a></li>
             <li class="goChallenge">챌린지 둘러보기</li>
             <li class="goMypage">마이페이지</li>
         </ul>
@@ -71,7 +72,7 @@
                     <button type="submit">추가</button>
                 </form>
             </div>
-            <a href="/calendar/month" role="button">month로 돌아가기</a>
+            
         </div>
         <script src="{% static '/js/todocalendar/day.js' %}"></script>
     </div>
