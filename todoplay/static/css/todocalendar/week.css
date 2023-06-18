@@ -1,40 +1,40 @@
 
-
-.container {
+/* 미니달력 */
+.week-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.bar {
-    width: 100%;
-    height: 50px;
-    /* background-color: #3b4f69; */
 }
 
 .bar-menu {
+    width: 100%;
+    height: 10vh;
     list-style-type: none;
     display: flex;
-    padding: 0 2.1rem;
+    padding: 0 0 0 1.4rem;
+    justify-content: flex-start;
 }
 
 .year-mon {
-    text-align: left;
-    padding: 1.7rem 32.5rem 2rem 2rem; 
+    padding: 1rem 2rem;
+    margin: .7rem .35rem .7rem .7rem;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
+    text-align: left;
+    width: 75%;
+    
 }
 
-.switch-btn {
+.week-switch-btn {
     margin-top: 1%;
-    margin-left: 2rem;
+    
 }
 
 
 /* The switch - the box around the slider */
 
-.switch {
-    margin-right: 20%;
+.week-switch {
     position: relative;
     display: inline-block;
     width: 140px;
@@ -45,14 +45,14 @@
 
 /* Hide default HTML checkbox */
 
-.switch input {
+.week-switch input {
     display: none;
 }
 
 
 /* The slider */
 
-.slider {
+.week-slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -64,42 +64,42 @@
     transition: .4s;
 }
 
-.slider:before {
+.week-slider:before {
     position: absolute;
     content: "WEEK";
     text-align: center;
     color: white;
     height: 26px;
     width: 75px;
-    left: 4px;
+    left: 60px;
     bottom: 4px;
     background-color: #67BEC7;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
-input:checked+.slider {
+input:checked+.week-slider {
     background-color: #D9D9D9;
 }
 
-input:focus+.slider {
+input:focus+.week-slider {
     box-shadow: 0 0 1px #D9D9D9;
 }
 
-input:checked+.slider:before {
-    -webkit-transform: translateX(57px);
-    -ms-transform: translateX(57px);
-    transform: translateX(57px);
+input:checked+.week-slider:before {
+    -webkit-transform: translateX(-57px);
+    -ms-transform: translateX(-57px);
+    transform: translateX(-57px);
 }
 
 
 /* Rounded sliders */
 
-.slider.round {
+.week-slider.round {
     border-radius: 100px;
 }
 
-.slider.round:before {
+.week-slider.round:before {
     border-radius: 90px;
 }
 
@@ -124,7 +124,7 @@ p {
 }
 
 .week {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 10%;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -146,6 +146,8 @@ p {
 .day {
     margin-top: 5%;
     font-weight: 800;
+    font-size: medium;
+
 }
 
 
@@ -154,7 +156,7 @@ p {
 
 /* 미니 캘린더 박스 */
 
-.preview {
+.week-preview {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -164,13 +166,13 @@ p {
     background: #fff;
 }
 
-.miniHeader {
+.week-miniHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.year-month {
+.week-year-month {
     color: black;
     font-size: 15px;
     font-weight: bold;
@@ -197,7 +199,7 @@ p {
     width: 20px;
 }
 
-.days {
+.week-days {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -208,14 +210,15 @@ p {
     margin-bottom: 2px;
 }
 
-.day {
+.week-day {
     width: 27px;
     justify-content: center;
     align-self: center;
     text-align: center;
+    display: none;
 }
 
-.dates {
+.week-dates {
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -223,7 +226,7 @@ p {
     height: 130px;
 }
 
-.date {
+.week-date {
     text-align: center;
     cursor: pointer;
     border: none;
@@ -234,7 +237,7 @@ p {
     opacity: .0;
 }
 
-.date:active {
+.week-date:active {
     position: relative;
     top: 50%;
     left: 50%;
@@ -246,13 +249,13 @@ p {
     content: '';
 }
 
-.today {
+.weekToday {
     position: relative;
     background-color: black;
     color: white;
 }
 
-.today::before {
+.weekToday::before {
     position: absolute;
     top: 50%;
     left: 50%;
