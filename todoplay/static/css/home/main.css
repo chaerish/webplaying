@@ -5,6 +5,10 @@
     font-style: normal;
   }
   
+* {
+    font-family: 'Pretendard-Regular';
+}
+
   .menu {
       list-style-type: none;
       display: flex;
