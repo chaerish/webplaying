@@ -44,12 +44,14 @@
                 <div class="check-cal">
                 </div>
             </div>
+            {{ data.date }}
             <div class="daliy">
                 <div class="todo-bar">
-                    <p class="mon-day"></p>
+                    <p class="mon-day">{{ data.date }}</p>
                     <p class="ment">오늘의 할 일</p>
                 </div>
                 {% for item in item_list %}
+                {{data.date}}
                 <div class="todo-list">
                     <div class="one">
                         <p class="category">{{ item.category }}</p>
@@ -60,6 +62,7 @@
                         <input type="button" class="delete_item" value="삭제" onclick="delete_item({{ item.pk }})"></input>
                     </div>
                 </div>
+
                 {% endfor %}
                 <form method="POST"  style="margin-left:40%;padding-top: 5%">
                 {% csrf_token %}
@@ -71,7 +74,7 @@
                      <input type="text" name="todo" placeholder="할 일을 입력하세요">
                     <button type="submit">추가</button>
                 </form>
-            </div>
+            </div>가
             
         </div>
     

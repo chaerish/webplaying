@@ -98,7 +98,8 @@ def delete_item(request, itempk):
 def day(request):
     category_list = Category.objects.all()
     item_list = todoItem.objects.select_related('category').order_by('-pk')
-    context = {'item_list': item_list, 'category_list': category_list}
+    c_item = calendarItem.objects.all()
+    context = {'item_list': item_list, 'category_list': category_list,'c_item':c_item}
 
     if request.method == 'POST':
         todo = request.POST.get('todo', '')  # todo 가져오기
@@ -111,12 +112,13 @@ def day(request):
                 'date': date,
                 'content': todo,
             }
+
             date_json = json.loads(data['date'])
             data['date'] = date_json['data']
             print(data)
             calendar_data = calendarItem(data=json.dumps(data))
             calendar_data.save()
             # 쿼리파마리터 리셋하는거 해야되
-        return redirect('day')  # POST 요청 후에는 day 뷰로 리다이렉트
+        return redirect('month')  # POST 요청 후에는 day 뷰로 리다이렉트
 
     return render(request, 'todocalendar/day.html', context)
