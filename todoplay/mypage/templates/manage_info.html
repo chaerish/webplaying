@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link             href="{% static '/css/mypage/manage_info.css' %}"
+ rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <ul class="menu">
+                  <li class="logo"><img src="{% static '/img/logo.png' %}" /></li>
+                <li class="user">{{user}}님 안녕하세요!</li>
+                <li class="goHome"><a href="/calendar/month">홈</a></li>
+                <li class="goChallenge"><a href="/challenge">챌린지 둘러보기</a></li>
+                <li class="goMypage"><a href="/mypage">마이페이지</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="manage_info">개인정보 관리</div>
+            <input
+                class="email_id"
+                type="text"
+                name="email_id"
+                placeholder="이메일 아이디"
+                style="width: 550px; height: 50px"
+            />
+            <br />
+            <input
+                class="nickname"
+                type="text"
+                name="nickname"
+                placeholder="닉네임"
+                style="width: 550px; height: 50px"
+            />
+            <br />
+            <button class="goChangePW" style="width: 550px; height: 50px">
+                <a href="/home/changePW">비밀번호 변경하러 가기</a>
+            </button>
+            <hr align="center" style="border: solid 0.5px black; width: 60%" />
+           <a href="/mypage">
+            <input
+                class="submit_button"
+                type="button"
+                value="변경사항 적용"
+                style="width: 545px; height: 55px"
+                onclick="alert('변경사항이 적용되었습니다.')"
+            />
+                </a>
+        </main>
+    </body>
+</html>

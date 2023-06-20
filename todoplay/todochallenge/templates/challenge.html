@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="{% static '/css/todochallenge/challenge.css' %}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <ul class="menu">
+                <li class="logo"><img src="{% static '/img/logo.png' %}" /></li>
+                <li class="user">{{user}}님 안녕하세요!</li>
+                <li class="goHome"><a href="/calendar/month">홈</a></li>
+                <li class="goChallenge"><a href="#">챌린지 둘러보기</a></li>
+                <li class="goMypage"><a href="/mypage">마이페이지</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="search">
+                <input type="text" placeholder="챌린지 검색하기" />
+                <img
+                    class="magnifier"
+                    src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"
+                />
+            </div>
+            <ul class="challenge_list">
+                <a href="/challenge/1">
+                <li id="challenge">
+                    <div class="challenge_info">
+                        <p class="challenge_title">하마챌린지</p>
+                        <p class="challenge_period">4/1~4/22</p>
+                        <button
+                            id="send_request"
+                            name="send_request"
+                            style="width: 100px; height: 90px"
+                        >
+                            12/100 <br />
+                            참가 신청
+                        </button>
+                    </div>
+                    <p class="challenge_explain">
+                        물을 매일매일 먹고싶은 사람들
+                    </p>
+                </li>
+                </a>
+                <li id="challenge">
+                    <div class="challenge_info">
+                        <p class="challenge_title">거지챌린지</p>
+                        <p class="challenge_period">4/1~12/1</p>
+                        <button
+                            id="finish_request"
+                            name="finish_request"
+                            style="width: 100px; height: 90px"
+                        >
+                            마감
+                        </button>
+                    </div>
+                    <p class="challenge_explain">하루에 만원만 써요!!!</p>
+                </li>
+            </ul>
+            <input
+                class="create_challenge_btn"
+                type="submit"
+                value="챌린지 만들기"
+                style="width: 150px; height: 50px"
+            />
+        </main>
+    </body>
+</html>

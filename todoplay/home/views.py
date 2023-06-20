@@ -1,49 +1,42 @@
 from django.contrib.auth import get_user_model, authenticate, logout
+from django.contrib import auth
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-
-User = get_user_model()
-
+from .forms import UserForm
+from .models import User
 
 # Create your views here.
-def login(request):
+
+def signup(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(
+                username=request.POST['username'],
+                password=request.POST['password'],
+                nickname = request.POST["nickname"],
+            )
+            auth.login(request, user)  # 로그인
+            return redirect('calendar:month')
+        else:
+            # form = UserForm()
+            print(form.errors)
+            return render(request,"signup.html",{"form":form})
+
+    return render(request,"signup.html")
+
+def login_view(request):
     if request.method == 'GET':
-        # GET 요청 처리
-        # 필요한 로직을 수행하고, 데이터를 가져오는 등의 작업을 진행할 수 있습니다.
-
-        # 예시: 데이터를 가져와서 context에 저장
-        data = "Hello, World!"
-        context = {'data': data}
-
-        # HTML 템플릿 파일을 렌더링하여 HttpResponse 객체 반환
-        return render(request, 'login.html', context)
+        return render(request, 'login.html')
 
     elif request.method == 'POST':
-        email = request.POST.get('email', None)
-        nickname = request.POST.get('nickname', None)
-        name = request.POST.get('name', None)
+        username = request.POST.get('username', None)
         password = request.POST.get('password', None)
 
-        user = User.objects.create_user(email=email, password=password, nickname=nickname, name=name)
-        user.profile_image = "default_profile.jpg"
-        user.save()
-
-        message = '회원가입을 성공했습니다.'
-        return HttpResponse(message)
-
-
-def signUp(request):
-    if request.method == 'GET':
-        return render(request, 'signup.html')
-
-    elif request.method == 'POST':
-        email = request.POST.get('email', None)
-        password = request.POST.get('password', None)
-
-        user = authenticate(request, username=email, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            request.session['email'] = user.email  # 세션에 사용자 이메일 저장
+            request.session['username'] = user.username  # 세션에 사용자 저장
             return HttpResponse('로그인을 성공했습니다.')
         else:
             return HttpResponse('로그인에 실패했습니다.', status=400)
