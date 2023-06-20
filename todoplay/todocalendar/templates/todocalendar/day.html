@@ -44,14 +44,14 @@
                 <div class="check-cal">
                 </div>
             </div>
-            {{ data.date }}
             <div class="daliy">
                 <div class="todo-bar">
                     <p class="mon-day">{{ data.date }}</p>
                     <p class="ment">오늘의 할 일</p>
+
                 </div>
                 {% for item in item_list %}
-                {{data.date}}
+                {{ item.date }}
                 <div class="todo-list">
                     <div class="one">
                         <p class="category">{{ item.category }}</p>

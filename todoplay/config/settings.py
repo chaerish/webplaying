@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'todocalendar',
     'todochallenge',
+    'mypage',
 ]
 
 MIDDLEWARE = [

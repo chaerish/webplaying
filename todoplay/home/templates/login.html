@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Todoplay</title>
         <link href="{% static '/css/home/login.css' %}" rel="stylesheet" type="text/css" />
+             <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
     </head>
     <body>
         <div class="mainbox">
@@ -21,14 +23,16 @@
             <div class="right">
                 <h2 class="login_txt">LOGIN</h2>
                 <input
+                        id="username"
                     class="email_id"
                     type="text"
-                    name="email_id"
+                    name="username"
                     placeholder="이메일 아이디"
                     style="width: 544px; height: 40px"
                 />
                 <br />
                 <input
+                        id="password"
                     class="password"
                     type="password"
                     name="password"
@@ -43,16 +47,53 @@
                     </label>
                 </div>
                 <div class="min_right">
-                    <div class="find">아이디/비밀번호 찾기</div>
+                    <div class="find"><a href="/home/findID">아이디/비밀번호 찾기</a></div>
                 </div>
                 <input
+                        id="login_button"
                     class="Login"
                     type="submit"
                     value="로그인"
                     style="width: 544px; height: 45px"
                 />
-                <div class="goto_join">투두플레이 회원가입</div>
+                <div class="goto_join"><a href="/home/signup">투두플레이 회원가입</a></div>
             </div>
         </div>
+
+
+<script>
+
+    function getCookie(name) {
+        const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+        return cookieValue ? cookieValue.pop() : '';
+    }
+
+    $("#login_button").click(function() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:8000/home/login',
+            headers: {
+                "X-CSRFToken": getCookie("csrftoken")
+            },
+            contentType: 'application/json',
+            data: JSON.stringify({
+                'username': username,
+                'password': password,
+            }),
+            success: function(data){
+                alert("로그인 성공");
+                location.href="/";
+            },
+            error: function(request, status, error){
+                alert(error);
+            }
+        })
+    })
+
+</script>
+
     </body>
 </html>

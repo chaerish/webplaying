@@ -101,6 +101,7 @@ def day(request):
     c_item = calendarItem.objects.all()
     context = {'item_list': item_list, 'category_list': category_list,'c_item':c_item}
 
+
     if request.method == 'POST':
         todo = request.POST.get('todo', '')  # todo 가져오기
         category_id = request.POST.get('category', '')  # category 가져오기
@@ -122,3 +123,6 @@ def day(request):
         return redirect('month')  # POST 요청 후에는 day 뷰로 리다이렉트
 
     return render(request, 'todocalendar/day.html', context)
+
+
+
