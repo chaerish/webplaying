@@ -183,7 +183,7 @@
 
         document.querySelector('.dates').innerHTML = dates.join('');
 
-        const today = new Date(); // 오늘 날짜 표기하기 위해
+        const today = new Date();; // 오늘 날짜 표기하기 위해
         if (viewMonth === today.getMonth() && viewYear === today.getFullYear()) { // 현재 월을 보고 있는게 맞는지
             for (let miniDate of document.querySelectorAll('.this')) { // this 태그 찾기
                 if (+miniDate.innerText === today.getDate()) { // +연산자로 숫자로 변경

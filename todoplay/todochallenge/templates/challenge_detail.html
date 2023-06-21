@@ -12,6 +12,8 @@
             rel="stylesheet"
             type="text/css"
         />
+        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
     </head>
     <body>
         <header>
@@ -34,7 +36,7 @@
                             name="send_request"
                             style="width: 100px; height: 90px"
                         >
-                            12/100 <br />
+                            <span class="participant_number">12</span>/100 <br />
                             참가 신청
                         </button>
                     </div>
@@ -75,9 +77,16 @@
                 type="button"
                 value="참가 신청하기"
                 style="width: 280px; height: 60px; cursor: pointer;"
-                onclick="alert('참가신청이 완료되었습니다.')"
+                onclick="challenge_submit()"
             />
 
-        </main>
+
+            <script>
+                function challenge_submit(){
+                    alert('참가 신청이 완료되었습니다.');
+                    $(".participant_number").text('13');
+                }
+
+            </script>
     </body>
 </html>
